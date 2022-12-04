@@ -6,7 +6,7 @@
 /*   By: amuller <amuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:07:48 by amuller           #+#    #+#             */
-/*   Updated: 2022/12/03 17:52:56 by amuller          ###   ########.fr       */
+/*   Updated: 2022/12/04 22:29:36 by amuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,6 +122,7 @@ typedef struct s_data
 	int		hxm;
 	int		back;
 	int		returnerr;
+	int		fd;
 	int		count;
 	int		i;
 }				t_data;
@@ -146,5 +147,29 @@ void	ft_printnum(long n, t_data *data);
 void	ft_get_len_h(unsigned long n, t_data *data);
 void	ft_put_hex(unsigned long n, t_data *data);
 void	ft_printhex(unsigned long n, t_data *data);
+
+// -------------------------- FT_PRINTF_FD -------------------------
+
+
+int		ft_printf_fd(int fd, const char *format, ...);
+//__attribute__((format (printf, 1, 2)));
+void	ft_get_info_fd(const char *format, t_data *data);
+void	ft_arg_manager_fd(va_list arg, const char *format, t_data *data);
+void	ft_flag_fd(const char *format, t_data *data);
+void	ft_precision_fd(const char *format, t_data *data);
+
+void	ft_printchar_fd(char c, t_data *data);
+void	ft_printstr_fd(char *str, t_data *data);
+void	ft_put_sign_fd(long n, t_data *data);
+void	ft_put_padding_fd(long n, t_data *data);
+void	ft_put_trail_fd(t_data *data);
+
+void	ft_get_len_d_fd(long n, t_data *data);
+void	ft_putnb_fd(long n, t_data *data);
+void	ft_printnum_fd(long n, t_data *data);
+
+void	ft_get_len_h_fd(unsigned long n, t_data *data);
+void	ft_put_hex_fd(unsigned long n, t_data *data);
+void	ft_printhex_fd(unsigned long n, t_data *data);
 
 #endif

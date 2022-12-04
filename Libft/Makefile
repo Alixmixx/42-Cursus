@@ -60,6 +60,11 @@ SRCS		+=	ft_printf.c
 SRCS		+=	ft_put.c
 SRCS		+=	ft_digit.c
 SRCS		+=	ft_hex.c
+#FT_PRINTF_FD
+SRCS		+=	ft_printf_fd.c
+SRCS		+=	ft_put_fd.c
+SRCS		+=	ft_digit_fd.c
+SRCS		+=	ft_hex_fd.c
 
 OBJS		=	$(SRCS:.c=.o)
 
